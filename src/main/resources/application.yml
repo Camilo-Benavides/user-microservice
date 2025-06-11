@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8090}
+  port: ${PORT}
 
 spring:
   application:
@@ -16,7 +16,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 jwt:
-  secret: my-super-secret-key-which-is-long-enough-1234567890
+  secret: ${JWT_SECRET}
   expiration: 3600000
 
 springdoc:
