@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: ${PORT:8090}
 
 spring:
   application:
@@ -14,8 +14,6 @@ spring:
       ddl-auto: update
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-  config:
-    import: "optional:configserver:http://localhost:8888"
 
 jwt:
   secret: my-super-secret-key-which-is-long-enough-1234567890
